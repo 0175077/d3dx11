@@ -1,4 +1,4 @@
-//--------------------------------------------------------------------------------------
+﻿//--------------------------------------------------------------------------------------
 // File: Tutorial04.cpp
 //
 // This application displays a 3D cube using Direct3D 11
@@ -42,6 +42,7 @@ ID3D11Device*           g_pd3dDevice = NULL;
 ID3D11DeviceContext*    g_pImmediateContext = NULL;
 IDXGISwapChain*         g_pSwapChain = NULL;
 ID3D11RenderTargetView* g_pRenderTargetView = NULL;
+// --
 ID3D11VertexShader*     g_pVertexShader = NULL;
 ID3D11PixelShader*      g_pPixelShader = NULL;
 ID3D11InputLayout*      g_pVertexLayout = NULL;
@@ -139,7 +140,7 @@ HRESULT InitWindow( HINSTANCE hInstance, int nCmdShow )
     return S_OK;
 }
 
-
+// --
 //--------------------------------------------------------------------------------------
 // Helper for compiling shaders with D3DX11
 //--------------------------------------------------------------------------------------
@@ -253,6 +254,8 @@ HRESULT InitDevice()
     vp.TopLeftY = 0;
     g_pImmediateContext->RSSetViewports( 1, &vp );
 
+
+    // --
     // Compile the vertex shader
     ID3DBlob* pVSBlob = NULL;
     hr = CompileShaderFromFile( L"Tutorial04.fx", "VS", "vs_4_0", &pVSBlob );
