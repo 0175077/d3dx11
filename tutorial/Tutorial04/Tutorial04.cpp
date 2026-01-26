@@ -255,7 +255,9 @@ HRESULT InitDevice()
     g_pImmediateContext->RSSetViewports( 1, &vp );
 
 
-    // --
+    // ---------------------------------------------------------------------------------------
+    // 
+    // 
     // Compile the vertex shader
     ID3DBlob* pVSBlob = NULL;
     hr = CompileShaderFromFile( L"Tutorial04.fx", "VS", "vs_4_0", &pVSBlob );
@@ -274,6 +276,8 @@ HRESULT InitDevice()
         return hr;
 	}
 
+
+
     // Define the input layout
     D3D11_INPUT_ELEMENT_DESC layout[] =
     {
@@ -291,6 +295,8 @@ HRESULT InitDevice()
 
     // Set the input layout
     g_pImmediateContext->IASetInputLayout( g_pVertexLayout );
+    //---------------------------------------------------------------------------------------------------------
+
 
 	// Compile the pixel shader
 	ID3DBlob* pPSBlob = NULL;
@@ -307,7 +313,7 @@ HRESULT InitDevice()
 	pPSBlob->Release();
     if( FAILED( hr ) )
         return hr;
-
+    //-------------------------------------------------------------------------------
     // Create vertex buffer
     SimpleVertex vertices[] =
     {
@@ -337,7 +343,9 @@ HRESULT InitDevice()
     UINT stride = sizeof( SimpleVertex );
     UINT offset = 0;
     g_pImmediateContext->IASetVertexBuffers( 0, 1, &g_pVertexBuffer, &stride, &offset );
-
+    //-------------------------------------------------------------------------------------
+    // 
+    // 
     // Create index buffer
     WORD indices[] =
     {
@@ -370,7 +378,8 @@ HRESULT InitDevice()
 
     // Set index buffer
     g_pImmediateContext->IASetIndexBuffer( g_pIndexBuffer, DXGI_FORMAT_R16_UINT, 0 );
-
+    //-------------------------------------------------------------------------------------
+    // 
     // Set primitive topology
     g_pImmediateContext->IASetPrimitiveTopology( D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST );
 

@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\tutorial\\Tutorial06\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{291B6A55-368E-4420-A0EB-FBE077B9F137}|Tutorial06_2010.vcxproj|C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\tutorial\\Tutorial06\\Tutorial06.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{291B6A55-368E-4420-A0EB-FBE077B9F137}|Tutorial06_2010.vcxproj|solutionrelative:Tutorial06.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{291B6A55-368E-4420-A0EB-FBE077B9F137}|Tutorial06_2010.vcxproj|C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\tutorial\\Tutorial06\\Tutorial06.fx||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{291B6A55-368E-4420-A0EB-FBE077B9F137}|Tutorial06_2010.vcxproj|solutionrelative:Tutorial06.fx||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Tutorial06.cpp",
+              "DocumentMoniker": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\tutorial\\Tutorial06\\Tutorial06.cpp",
+              "RelativeDocumentMoniker": "Tutorial06.cpp",
+              "ToolTip": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\tutorial\\Tutorial06\\Tutorial06.cpp",
+              "RelativeToolTip": "Tutorial06.cpp",
+              "ViewState": "AgIAAHoBAAAAAAAAAAAAAIgBAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-01-26T05:40:24.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Tutorial06.fx",
+              "DocumentMoniker": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\tutorial\\Tutorial06\\Tutorial06.fx",
+              "RelativeDocumentMoniker": "Tutorial06.fx",
+              "ToolTip": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\tutorial\\Tutorial06\\Tutorial06.fx",
+              "RelativeToolTip": "Tutorial06.fx",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAAABEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-01-26T05:26:57.819Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
