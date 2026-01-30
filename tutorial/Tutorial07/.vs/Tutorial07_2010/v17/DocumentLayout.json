@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\tutorial\\Tutorial07\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D29C6982-A589-4081-89B1-91E78D7C41E2}|Tutorial07_2010.vcxproj|C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\tutorial\\Tutorial07\\Tutorial07.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D29C6982-A589-4081-89B1-91E78D7C41E2}|Tutorial07_2010.vcxproj|solutionrelative:Tutorial07.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Tutorial07.cpp",
+              "DocumentMoniker": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\tutorial\\Tutorial07\\Tutorial07.cpp",
+              "RelativeDocumentMoniker": "Tutorial07.cpp",
+              "ToolTip": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\tutorial\\Tutorial07\\Tutorial07.cpp",
+              "RelativeToolTip": "Tutorial07.cpp",
+              "ViewState": "AgIAAEYCAAAAAAAAAAAAAGoCAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-01-30T05:15:39.412Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

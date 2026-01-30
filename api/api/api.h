@@ -1,12 +1,14 @@
-#pragma once
+﻿#pragma once
 
 #include<Windows.h>
 #include "msg.h"
+#include "render.h"
 
 class C_API
 {
 private:
 	static C_API* m_pApi;
+	C_RENDER m_cRender;
 	HINSTANCE	m_hInstance;
 	HWND		m_hWnd;
 	C_MSG		m_cMsg;

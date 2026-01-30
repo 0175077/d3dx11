@@ -3,6 +3,42 @@
   "WorkspaceRootPath": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\dxUtil.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|solutionrelative:api\\dxUtil.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\dxUtil.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|solutionrelative:api\\dxUtil.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\render.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|solutionrelative:api\\render.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\api.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|solutionrelative:api\\api.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\api.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|solutionrelative:api\\api.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\render.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|solutionrelative:api\\render.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\msg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|solutionrelative:api\\msg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\msg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|solutionrelative:api\\msg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|solutionrelative:api\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7B5275AE-7C5C-485C-9B3B-89C96CBB572C}|api\\api.vcxproj|solutionrelative:api\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -19,6 +55,123 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "dxUtil.cpp",
+              "DocumentMoniker": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\dxUtil.cpp",
+              "RelativeDocumentMoniker": "api\\dxUtil.cpp",
+              "ToolTip": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\dxUtil.cpp",
+              "RelativeToolTip": "api\\dxUtil.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-01-30T06:45:41.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dxUtil.h",
+              "DocumentMoniker": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\dxUtil.h",
+              "RelativeDocumentMoniker": "api\\dxUtil.h",
+              "ToolTip": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\dxUtil.h",
+              "RelativeToolTip": "api\\dxUtil.h",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAgwBIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-01-30T06:38:56.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "msg.cpp",
+              "DocumentMoniker": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\msg.cpp",
+              "RelativeDocumentMoniker": "api\\msg.cpp",
+              "ToolTip": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\msg.cpp",
+              "RelativeToolTip": "api\\msg.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-01-30T06:37:04.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "msg.h",
+              "DocumentMoniker": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\msg.h",
+              "RelativeDocumentMoniker": "api\\msg.h",
+              "ToolTip": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\msg.h",
+              "RelativeToolTip": "api\\msg.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-01-30T06:10:17.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "api.cpp",
+              "DocumentMoniker": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\api.cpp",
+              "RelativeDocumentMoniker": "api\\api.cpp",
+              "ToolTip": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\api.cpp",
+              "RelativeToolTip": "api\\api.cpp",
+              "ViewState": "AgIAACwAAAAAAAAAAAApwDMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-01-30T05:35:05.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "api.h",
+              "DocumentMoniker": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\api.h",
+              "RelativeDocumentMoniker": "api\\api.h",
+              "ToolTip": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\api.h",
+              "RelativeToolTip": "api\\api.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-01-30T05:34:16.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "framework.h",
+              "DocumentMoniker": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\framework.h",
+              "RelativeDocumentMoniker": "api\\framework.h",
+              "ToolTip": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\framework.h",
+              "RelativeToolTip": "api\\framework.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-01-30T05:33:44.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "render.cpp",
+              "DocumentMoniker": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\render.cpp",
+              "RelativeDocumentMoniker": "api\\render.cpp",
+              "ToolTip": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\render.cpp",
+              "RelativeToolTip": "api\\render.cpp",
+              "ViewState": "AgIAACwBAAAAAAAAAAApwDUBAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-01-30T05:18:04.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "render.h",
+              "DocumentMoniker": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\render.h",
+              "RelativeDocumentMoniker": "api\\render.h",
+              "ToolTip": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\render.h",
+              "RelativeToolTip": "api\\render.h",
+              "ViewState": "AgIAACEAAAAAAAAAAAApwC4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-01-30T05:15:10.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Hclass\\Documents\\GitHub\\d3dx11\\api\\api\\main.cpp",
               "RelativeDocumentMoniker": "api\\main.cpp",
