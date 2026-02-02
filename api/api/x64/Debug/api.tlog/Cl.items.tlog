@@ -1,4 +1,6 @@
-C:\Users\Hclass\Documents\GitHub\d3dx11\api\api\api.cpp;C:\Users\Hclass\Documents\GitHub\d3dx11\api\api\x64\Debug\api.obj
-C:\Users\Hclass\Documents\GitHub\d3dx11\api\api\main.cpp;C:\Users\Hclass\Documents\GitHub\d3dx11\api\api\x64\Debug\main.obj
-C:\Users\Hclass\Documents\GitHub\d3dx11\api\api\msg.cpp;C:\Users\Hclass\Documents\GitHub\d3dx11\api\api\x64\Debug\msg.obj
-C:\Users\Hclass\Documents\GitHub\d3dx11\api\api\render.cpp;C:\Users\Hclass\Documents\GitHub\d3dx11\api\api\x64\Debug\render.obj
+D:\kimboseong\c++\api\api\api.cpp;D:\kimboseong\c++\api\api\x64\Debug\api.obj
+D:\kimboseong\c++\api\api\dxUtil.cpp;D:\kimboseong\c++\api\api\x64\Debug\dxUtil.obj
+D:\kimboseong\c++\api\api\main.cpp;D:\kimboseong\c++\api\api\x64\Debug\main.obj
+D:\kimboseong\c++\api\api\mesh.cpp;D:\kimboseong\c++\api\api\x64\Debug\mesh.obj
+D:\kimboseong\c++\api\api\msg.cpp;D:\kimboseong\c++\api\api\x64\Debug\msg.obj
+D:\kimboseong\c++\api\api\render.cpp;D:\kimboseong\c++\api\api\x64\Debug\render.obj

@@ -1,4 +1,4 @@
-﻿#include "api.h"
+#include "api.h"
 #include "resource.h"
 
 C_API* C_API::m_pApi = nullptr;
@@ -53,8 +53,8 @@ bool C_API::init(HINSTANCE hInstance)
 {
 	registerWindow(hInstance);
 	createWindow();
-
 	m_cMsg.init();
+
 	m_cRender.InitDevice(m_hWnd);
 
 	return true;
@@ -76,5 +76,5 @@ void C_API::updateMsg()
 		}
 	}
 
-	m_cRender.CleanupDevide();
+	m_cRender.CleanupDevice();
 }

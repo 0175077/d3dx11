@@ -1,19 +1,16 @@
-﻿#pragma once
-#pragma comment(lib, "d3d11.lib")
-#pragma comment(lib, "d3dx11.lib")
-#pragma comment(lib, "d3dcompiler.lib")
+#pragma once
 
-#include <windows.h>
 #include <d3d11.h>
 #include <d3dx11.h>
 #include <d3dcompiler.h>
 #include <xnamath.h>
-#include "resource.h"
 
+#include "dxUtil.h"
+#include "mesh.h"
 
-class C_RENDER {
-
-
+class C_RENDER
+{
+private:
     struct SimpleVertex
     {
         XMFLOAT3 Pos;
@@ -40,7 +37,7 @@ class C_RENDER {
     //--------------------------------------------------------------------------------------
     // Global Variables
     //--------------------------------------------------------------------------------------
-    HINSTANCE                           g_hInst = NULL;
+    //HINSTANCE                           g_hInst = NULL;
     HWND                                g_hWnd = NULL;
     D3D_DRIVER_TYPE                     g_driverType = D3D_DRIVER_TYPE_NULL;
     D3D_FEATURE_LEVEL                   g_featureLevel = D3D_FEATURE_LEVEL_11_0;
@@ -53,24 +50,25 @@ class C_RENDER {
     ID3D11VertexShader* g_pVertexShader = NULL;
     ID3D11PixelShader* g_pPixelShader = NULL;
     ID3D11InputLayout* g_pVertexLayout = NULL;
-    ID3D11Buffer* g_pVertexBuffer = NULL;
-    ID3D11Buffer* g_pIndexBuffer = NULL;
+//    ID3D11Buffer* g_pVertexBuffer = NULL;
+//    ID3D11Buffer* g_pIndexBuffer = NULL;
     ID3D11Buffer* g_pCBNeverChanges = NULL;
     ID3D11Buffer* g_pCBChangeOnResize = NULL;
     ID3D11Buffer* g_pCBChangesEveryFrame = NULL;
-    ID3D11ShaderResourceView* g_pTextureRV = NULL;
+//    ID3D11ShaderResourceView* g_pTextureRV = NULL;
     ID3D11SamplerState* g_pSamplerLinear = NULL;
     XMMATRIX                            g_World;
     XMMATRIX                            g_View;
     XMMATRIX                            g_Projection;
     XMFLOAT4                            g_vMeshColor = XMFLOAT4(0.7f, 0.7f, 0.7f, 1.0f);
 
+    C_MESH                              m_cMesh;
 
 public:
     C_RENDER() = default;
-    HRESULT InitDevice(HWND hWnd);
-    void CleanupDevide();
-    void Render();
 
+    HRESULT InitDevice(HWND hWnd);
+    void CleanupDevice();
+    void Render();
 
 };

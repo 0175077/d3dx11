@@ -1,32 +1,6 @@
-﻿#include "render.h"
+#include "render.h"
 
-HRESULT CompileShaderFromFile(const WCHAR* szFileName, LPCSTR szEntryPoint, LPCSTR szShaderModel, ID3DBlob** ppBlobOut)
-{
-    HRESULT hr = S_OK;
 
-    DWORD dwShaderFlags = D3DCOMPILE_ENABLE_STRICTNESS;
-#if defined( DEBUG ) || defined( _DEBUG )
-    // Set the D3DCOMPILE_DEBUG flag to embed debug information in the shaders.
-    // Setting this flag improves the shader debugging experience, but still allows 
-    // the shaders to be optimized and to run exactly the way they will run in 
-    // the release configuration of this program.
-    dwShaderFlags |= D3DCOMPILE_DEBUG;
-#endif
-
-    ID3DBlob* pErrorBlob;
-    hr = D3DX11CompileFromFile(szFileName, NULL, NULL, szEntryPoint, szShaderModel,
-        dwShaderFlags, 0, NULL, ppBlobOut, &pErrorBlob, NULL);
-    if (FAILED(hr))
-    {
-        if (pErrorBlob != NULL)
-            OutputDebugStringA((char*)pErrorBlob->GetBufferPointer());
-        if (pErrorBlob) pErrorBlob->Release();
-        return hr;
-    }
-    if (pErrorBlob) pErrorBlob->Release();
-
-    return S_OK;
-}
 
 HRESULT C_RENDER::InitDevice(HWND hWnd)
 {
@@ -84,6 +58,8 @@ HRESULT C_RENDER::InitDevice(HWND hWnd)
     if (FAILED(hr))
         return hr;
 
+    C_DXUTIL::init(g_pd3dDevice, g_pImmediateContext);
+
     // Create a render target view
     ID3D11Texture2D* pBackBuffer = NULL;
     hr = g_pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
@@ -135,9 +111,13 @@ HRESULT C_RENDER::InitDevice(HWND hWnd)
     vp.TopLeftY = 0;
     g_pImmediateContext->RSSetViewports(1, &vp);
 
+
+
+
+
     // Compile the vertex shader
     ID3DBlob* pVSBlob = NULL;
-    hr = CompileShaderFromFile(L"data\\Tutorial07.fx", "VS", "vs_4_0", &pVSBlob);
+    hr = C_DXUTIL::CompileShaderFromFile(L"data\\Tutorial07.fx", "VS", "vs_4_0", &pVSBlob);
     if (FAILED(hr))
     {
         MessageBox(NULL,
@@ -173,7 +153,7 @@ HRESULT C_RENDER::InitDevice(HWND hWnd)
 
     // Compile the pixel shader
     ID3DBlob* pPSBlob = NULL;
-    hr = CompileShaderFromFile(L"data\\Tutorial07.fx", "PS", "ps_4_0", &pPSBlob);
+    hr = C_DXUTIL::CompileShaderFromFile(L"data\\Tutorial07.fx", "PS", "ps_4_0", &pPSBlob);
     if (FAILED(hr))
     {
         MessageBox(NULL,
@@ -187,117 +167,28 @@ HRESULT C_RENDER::InitDevice(HWND hWnd)
     if (FAILED(hr))
         return hr;
 
-    // Create vertex buffer
-    SimpleVertex vertices[] =
-    {
-        { XMFLOAT3(-1.0f, 1.0f, -1.0f), XMFLOAT2(0.0f, 0.0f) },
-        { XMFLOAT3(1.0f, 1.0f, -1.0f), XMFLOAT2(1.0f, 0.0f) },
-        { XMFLOAT3(1.0f, 1.0f, 1.0f), XMFLOAT2(1.0f, 1.0f) },
-        { XMFLOAT3(-1.0f, 1.0f, 1.0f), XMFLOAT2(0.0f, 1.0f) },
 
-        { XMFLOAT3(-1.0f, -1.0f, -1.0f), XMFLOAT2(0.0f, 0.0f) },
-        { XMFLOAT3(1.0f, -1.0f, -1.0f), XMFLOAT2(1.0f, 0.0f) },
-        { XMFLOAT3(1.0f, -1.0f, 1.0f), XMFLOAT2(1.0f, 1.0f) },
-        { XMFLOAT3(-1.0f, -1.0f, 1.0f), XMFLOAT2(0.0f, 1.0f) },
+    m_cMesh.loadData("cube.dat");
 
-        { XMFLOAT3(-1.0f, -1.0f, 1.0f), XMFLOAT2(0.0f, 0.0f) },
-        { XMFLOAT3(-1.0f, -1.0f, -1.0f), XMFLOAT2(1.0f, 0.0f) },
-        { XMFLOAT3(-1.0f, 1.0f, -1.0f), XMFLOAT2(1.0f, 1.0f) },
-        { XMFLOAT3(-1.0f, 1.0f, 1.0f), XMFLOAT2(0.0f, 1.0f) },
 
-        { XMFLOAT3(1.0f, -1.0f, 1.0f), XMFLOAT2(0.0f, 0.0f) },
-        { XMFLOAT3(1.0f, -1.0f, -1.0f), XMFLOAT2(1.0f, 0.0f) },
-        { XMFLOAT3(1.0f, 1.0f, -1.0f), XMFLOAT2(1.0f, 1.0f) },
-        { XMFLOAT3(1.0f, 1.0f, 1.0f), XMFLOAT2(0.0f, 1.0f) },
-
-        { XMFLOAT3(-1.0f, -1.0f, -1.0f), XMFLOAT2(0.0f, 0.0f) },
-        { XMFLOAT3(1.0f, -1.0f, -1.0f), XMFLOAT2(1.0f, 0.0f) },
-        { XMFLOAT3(1.0f, 1.0f, -1.0f), XMFLOAT2(1.0f, 1.0f) },
-        { XMFLOAT3(-1.0f, 1.0f, -1.0f), XMFLOAT2(0.0f, 1.0f) },
-
-        { XMFLOAT3(-1.0f, -1.0f, 1.0f), XMFLOAT2(0.0f, 0.0f) },
-        { XMFLOAT3(1.0f, -1.0f, 1.0f), XMFLOAT2(1.0f, 0.0f) },
-        { XMFLOAT3(1.0f, 1.0f, 1.0f), XMFLOAT2(1.0f, 1.0f) },
-        { XMFLOAT3(-1.0f, 1.0f, 1.0f), XMFLOAT2(0.0f, 1.0f) },
-    };
-
-    D3D11_BUFFER_DESC bd;
-    ZeroMemory(&bd, sizeof(bd));
-    bd.Usage = D3D11_USAGE_DEFAULT;
-    bd.ByteWidth = sizeof(SimpleVertex) * 24;
-    bd.BindFlags = D3D11_BIND_VERTEX_BUFFER;
-    bd.CPUAccessFlags = 0;
-    D3D11_SUBRESOURCE_DATA InitData;
-    ZeroMemory(&InitData, sizeof(InitData));
-    InitData.pSysMem = vertices;
-    hr = g_pd3dDevice->CreateBuffer(&bd, &InitData, &g_pVertexBuffer);
-    if (FAILED(hr))
-        return hr;
-
-    // Set vertex buffer
     UINT stride = sizeof(SimpleVertex);
     UINT offset = 0;
-    g_pImmediateContext->IASetVertexBuffers(0, 1, &g_pVertexBuffer, &stride, &offset);
+    g_pImmediateContext->IASetVertexBuffers(0, 1, m_cMesh.getVertexBuffer(), &stride, &offset);
 
-    // Create index buffer
-    // Create vertex buffer
-    WORD indices[] =
-    {
-        3,1,0,
-        2,1,3,
 
-        6,4,5,
-        7,4,6,
+    g_pImmediateContext->IASetIndexBuffer(m_cMesh.getIndexBuffer(), DXGI_FORMAT_R16_UINT, 0);
 
-        11,9,8,
-        10,9,11,
-
-        14,12,13,
-        15,12,14,
-
-        19,17,16,
-        18,17,19,
-
-        22,20,21,
-        23,20,22
-    };
-
-    bd.Usage = D3D11_USAGE_DEFAULT;
-    bd.ByteWidth = sizeof(WORD) * 36;
-    bd.BindFlags = D3D11_BIND_INDEX_BUFFER;
-    bd.CPUAccessFlags = 0;
-    InitData.pSysMem = indices;
-    hr = g_pd3dDevice->CreateBuffer(&bd, &InitData, &g_pIndexBuffer);
-    if (FAILED(hr))
-        return hr;
-
-    // Set index buffer
-    g_pImmediateContext->IASetIndexBuffer(g_pIndexBuffer, DXGI_FORMAT_R16_UINT, 0);
-
-    // Set primitive topology
     g_pImmediateContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
-    // Create the constant buffers
-    bd.Usage = D3D11_USAGE_DEFAULT;
-    bd.ByteWidth = sizeof(CBNeverChanges);
-    bd.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
-    bd.CPUAccessFlags = 0;
-    hr = g_pd3dDevice->CreateBuffer(&bd, NULL, &g_pCBNeverChanges);
+    hr = C_DXUTIL::createBuffer(sizeof(CBNeverChanges), D3D11_BIND_CONSTANT_BUFFER, nullptr, &g_pCBNeverChanges);
     if (FAILED(hr))
         return hr;
 
-    bd.ByteWidth = sizeof(CBChangeOnResize);
-    hr = g_pd3dDevice->CreateBuffer(&bd, NULL, &g_pCBChangeOnResize);
+    hr = C_DXUTIL::createBuffer(sizeof(CBChangeOnResize), D3D11_BIND_CONSTANT_BUFFER, nullptr, &g_pCBChangeOnResize);
     if (FAILED(hr))
         return hr;
 
-    bd.ByteWidth = sizeof(CBChangesEveryFrame);
-    hr = g_pd3dDevice->CreateBuffer(&bd, NULL, &g_pCBChangesEveryFrame);
-    if (FAILED(hr))
-        return hr;
-
-    // Load the Texture
-    hr = D3DX11CreateShaderResourceViewFromFile(g_pd3dDevice, L"data\\seafloor.dds", NULL, NULL, &g_pTextureRV, NULL);
+    hr = C_DXUTIL::createBuffer(sizeof(CBChangesEveryFrame), D3D11_BIND_CONSTANT_BUFFER, nullptr, &g_pCBChangesEveryFrame);
     if (FAILED(hr))
         return hr;
 
@@ -338,17 +229,14 @@ HRESULT C_RENDER::InitDevice(HWND hWnd)
     return S_OK;
 }
 
-void C_RENDER::CleanupDevide()
+void C_RENDER::CleanupDevice()
 {
     if (g_pImmediateContext) g_pImmediateContext->ClearState();
 
     if (g_pSamplerLinear) g_pSamplerLinear->Release();
-    if (g_pTextureRV) g_pTextureRV->Release();
     if (g_pCBNeverChanges) g_pCBNeverChanges->Release();
     if (g_pCBChangeOnResize) g_pCBChangeOnResize->Release();
     if (g_pCBChangesEveryFrame) g_pCBChangesEveryFrame->Release();
-    if (g_pVertexBuffer) g_pVertexBuffer->Release();
-    if (g_pIndexBuffer) g_pIndexBuffer->Release();
     if (g_pVertexLayout) g_pVertexLayout->Release();
     if (g_pVertexShader) g_pVertexShader->Release();
     if (g_pPixelShader) g_pPixelShader->Release();
@@ -413,7 +301,8 @@ void C_RENDER::Render()
     g_pImmediateContext->VSSetConstantBuffers(2, 1, &g_pCBChangesEveryFrame);
     g_pImmediateContext->PSSetShader(g_pPixelShader, NULL, 0);
     g_pImmediateContext->PSSetConstantBuffers(2, 1, &g_pCBChangesEveryFrame);
-    g_pImmediateContext->PSSetShaderResources(0, 1, &g_pTextureRV);
+    //g_pImmediateContext->PSSetShaderResources(0, 1, &g_pTextureRV);
+    g_pImmediateContext->PSSetShaderResources(0, 1, m_cMesh.getTexture());
     g_pImmediateContext->PSSetSamplers(0, 1, &g_pSamplerLinear);
     g_pImmediateContext->DrawIndexed(36, 0, 0);
 
